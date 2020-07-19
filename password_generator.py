@@ -7,8 +7,8 @@ def get_input():
     """ Get password settings from user """
 
     # Define password length
-    maximum = int(input('Enter maximum password length: '))
     minimum = int(input('Enter minimum password length: '))
+    maximum = int(input('Enter maximum password length: '))
     assert (maximum >= minimum), 'Maximum must be larger than minimum'
 
     pass_length = random.randint(minimum, maximum)
@@ -88,4 +88,5 @@ def generate_password(pass_length, req):
 if __name__ == "__main__":
     pass_length, req = get_input()
     pwd = generate_password(pass_length, req)
+    print('Your password is:')
     print(pwd)
